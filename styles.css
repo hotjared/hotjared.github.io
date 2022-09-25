@@ -1,0 +1,9 @@
+#grid-container {
+    border-style: solid;
+    min-width: 500px;
+    min-height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+};
