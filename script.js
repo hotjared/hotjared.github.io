@@ -2,15 +2,21 @@
 const gridContainer = document.querySelector("#grid-container");
 const startButton = document.querySelector(".submit-button");
 const sizeBox = document.querySelector('#grid-size')
+const errors = document.querySelector('.errors');
 
 //Function to get new grid size on button click
 function getVal() {
     let val = sizeBox.value;
-    return Number(val);
+    if (val > 100 || val <= 0 || (typeof Number(val)) != "Number") {
+        errors.innerText = "Please enter a number between 1 and 100!"
+    } else {
+        errors.innerText = null;
+        return Number(val);
+    };
 };
 
 //function to make new grid
-function makeGrid(gridSize = 16) {
+function makeGrid(gridSize) {
     //set size of grid spaces to be compatible with total grid size
     let spaceSize = gridContainer.clientWidth / gridSize;
     //create grid spaces
@@ -39,6 +45,6 @@ startButton.addEventListener('click', () => {
     makeGrid(gridSize);
 });
 
-makeGrid();
+makeGrid(16);
 
 

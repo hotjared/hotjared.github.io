@@ -12,4 +12,8 @@
     max-height: 500px;
     display: flex;
     flex-wrap: wrap;
-};
+}
+
+.errors {
+    color: rgb(250, 106, 106);
+}
