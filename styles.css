@@ -1,3 +1,9 @@
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
 #grid-container {
     border-style: solid;
     min-width: 500px;

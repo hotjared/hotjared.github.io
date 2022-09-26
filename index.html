@@ -9,6 +9,16 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="grid-container"></div>
+    <div class="game-container">
+        <div class="text-content">
+            <p>Enter a size and press 'Create Grid' to make a new grid.</p>
+            <form class="generator">
+                <label for="grid-size">Grid Size:</label><br>
+                <input type="text" id="grid-size" name="grid-size" placeholder="Number 1-100" onblur="getVal()"><br>
+                <button class="submit-button" type="button">Create Grid</button>
+            </form>
+        </div>
+        <div id="grid-container"></div>
+    </div>
 </body>
 </html>
