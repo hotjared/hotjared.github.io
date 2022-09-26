@@ -7,7 +7,7 @@ const errors = document.querySelector('.errors');
 //Function to get new grid size on button click
 function getVal() {
     let val = sizeBox.value;
-    if (val > 100 || val <= 0 || (typeof Number(val)) != "Number") {
+    if (val > 100 || val <= 0 || (typeof Number(val)) != "number") {
         errors.innerText = "Please enter a number between 1 and 100!"
     } else {
         errors.innerText = null;
